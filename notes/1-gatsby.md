@@ -90,3 +90,13 @@
    ```
    volta pin node npm
    ```
+
+4. [Intro to Gatsby](https://jlengstorf.github.io/presentations/workshop-gatsby-mdx-blog/#/)
+   - [course repository](https://github.com/frontendmasters/gatsby-intro)
+   - [mdx](https://mdxjs.com/)
+   - why Gatsby?(What are the challenges of modern web development)
+     - 시작이 넘 어렵다. 배울게 넘많고 뭐가 뭔지 알기가 어렵다.
+     - 데이터를 관리하는 방법이 발전중이다. 이전에는 그냥 DB 정도 읽는거였다면 이제는 오만군데에서 다온다
+     - Getting is right is hard: 하나만 해도 평생해도 못하는데 작은 팀에서 다해야하면 ㄹㅇ 망한거.
+     - _Gatsby를 통해서 바로 시작한다. 그리고 근본적으로 Gatsby는 React와 GraphQL만 이용중이다. 그래서 다 되면 Netlify에 올리기만 하면 그만_ (Netlify는 Github을 지켜보다가 변경이 있으면 알아서 배포해주는 서비스)
+     - _Gatsby is a progressive Web App Generator designed to make the right thing the easy thing_
