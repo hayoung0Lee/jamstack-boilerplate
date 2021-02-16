@@ -1,33 +1,24 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import Logo from "./logo"
+import Menu from "./menu"
+
+const HeaderWrapper = styled.header`
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+`
+const logoSize = { width: 180, height: 60 }
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      borderBottom: `1px solid grey`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <HeaderWrapper>
+    <Logo logoSize={logoSize} siteTitle={siteTitle} />
+    <Menu logoSize={logoSize} menuSize={700} />
+  </HeaderWrapper>
 )
 
 Header.propTypes = {

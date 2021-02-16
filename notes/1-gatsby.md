@@ -102,3 +102,8 @@
      - _Gatsby is a progressive Web App Generator designed to make the right thing the easy thing_
 
 5. [styled-components 설치](https://www.gatsbyjs.com/docs/how-to/styling/styled-components/)
+
+6. Sample Layout: https://smartstore.naver.com/drj_gomtang/products/4856718842?
+
+7. How to Build Multilingual Sites with Gatsby: [here](https://www.gatsbyjs.com/blog/2020-02-19-how-to-build-multilingual-sites-with-gatsby/)
+    - plugin 을 통해서 react-intl 또는 i18next를 사용하는 것을 도와주는 것: [here](https://www.gatsbyjs.com/docs/how-to/adding-common-features/localization-i18n/)
