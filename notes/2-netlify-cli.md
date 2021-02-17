@@ -12,3 +12,12 @@ netlify init
 ## Netlify CMS
 - https://www.freecodecamp.org/news/how-to-build-a-blog-with-gatsby-and-netlify-cms/
 - https://www.netlifycms.org/
+
+
+## local backend: https://www.netlifycms.org/docs/beta-features/
+gatsbyjs.com/plugins/gatsby-plugin-netlify-cms/
+
+```
+npm install netlify-cms-app gatsby-plugin-netlify-cms
+npx netlify-cms-proxy-server
+```
