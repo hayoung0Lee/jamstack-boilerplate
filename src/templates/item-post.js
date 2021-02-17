@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import Layout from "../components/layout"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import ItemContext from "../context/item-context"
 import styled from "styled-components"
 
@@ -12,6 +12,7 @@ const ItemNav = styled.div`
   height: 50px;
   margin-bottom: 20px;
 `
+
 export default function ItemPost({ data }) {
   const item = data.markdownRemark
   const link = useContext(ItemContext).link
@@ -25,7 +26,6 @@ export default function ItemPost({ data }) {
         {!!prev && prev !== -1 && <Link to={prev}>이전 상품</Link>}
         {!!next && next !== -1 && <Link to={next}>다음 상품</Link>}
       </ItemNav>
-      <div>Hello Item Post</div>
       <div>
         <h1>{item.frontmatter.title}</h1>
       </div>
@@ -40,6 +40,7 @@ export default function ItemPost({ data }) {
           width="400"
         />
       </div>
+      <div dangerouslySetInnerHTML={{ __html: item.html }} />
     </Layout>
   )
 }
@@ -57,6 +58,7 @@ export const query = graphql`
       fields {
         slug
       }
+      html
     }
   }
 `

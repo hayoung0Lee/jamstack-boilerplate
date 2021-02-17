@@ -37,6 +37,7 @@ const Layout = ({ children }) => {
               thumbnail
               date
             }
+            html
             fields {
               slug
             }
