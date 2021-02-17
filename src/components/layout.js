@@ -53,14 +53,17 @@ const Layout = ({ children }) => {
     const linkList = {}
     Items.forEach((item, i) => {
       const prev = i - 1 >= 0 ? Items[i - 1].node.fields.slug : -1
+      const curItem = item
       const next = i + 1 < Items.length ? Items[i + 1].node.fields.slug : -1
-      linkList[item.node.fields.slug] = { prev: prev, next: next }
+      linkList[item.node.fields.slug] = {
+        prev: prev,
+        curItem: curItem,
+        next: next,
+      }
     })
     addLink(linkList)
     /* eslint-disable */
   }, [])
-
-  // console.log("layout Items", Items)
 
   return (
     <>

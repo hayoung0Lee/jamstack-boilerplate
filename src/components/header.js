@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import Logo from "./logo"
-import Menu from "./menu"
+import MenuBar from "./menu-bar"
 
 const HeaderWrapper = styled.header`
   width: 80vw;
@@ -17,7 +17,7 @@ const logoSize = { width: 180, height: 60 }
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <Logo logoSize={logoSize} siteTitle={siteTitle} />
-    <Menu logoSize={logoSize} menuSize={700} />
+    <MenuBar logoSize={logoSize} menuSize={700} />
   </HeaderWrapper>
 )
 

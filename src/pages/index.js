@@ -1,14 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-const tempStyle = {
-  width: `500px`,
-  fontSize: 50,
-  margin: `auto`,
-  textAlign: `center`,
-  marginTop: 150,
-}
+import { tempStyle } from "../utils/style"
 
 const IndexPage = () => (
   <Layout>
@@ -17,5 +10,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export { tempStyle }
 export default IndexPage

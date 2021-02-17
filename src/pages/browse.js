@@ -1,47 +1,9 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React, { useContext } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
-
-const ItemStyle = styled.div`
-  width: 200px;
-  height: 350px;
-  border: 1px solid black;
-  radius: 2px;
-
-  & .info {
-    margin-top: 20px;
-    width: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-`
-
-const ItemList = ({ item }) => {
-  return (
-    <div style={{ width: 400, margin: 20, border: `1px solid black` }}>
-      <Link to={item.node.fields.slug}>
-        <ItemStyle>
-          <div>
-            <img
-              src={item.node.frontmatter.thumbnail}
-              alt={item.node.frontmatter.title}
-              width="200"
-            />
-          </div>
-          <div className="info">
-            <div>{item.node.frontmatter.title}</div>
-            <div>{item.node.frontmatter.price}</div>
-            <div>{item.node.frontmatter.date}</div>
-          </div>
-        </ItemStyle>
-      </Link>
-    </div>
-  )
-}
+import ItemContext from "../context/item-context"
+import ItemList from "../components/itemlist"
 
 const BrowseItemStyle = styled.div`
   display: flex;
@@ -49,15 +11,14 @@ const BrowseItemStyle = styled.div`
   justify-content: space-between;
   border: 1px solid black;
 `
-const Browse = ({ data }) => {
-  const Items = data.allMarkdownRemark.edges
-
+const Browse = () => {
+  const Items = useContext(ItemContext).link
   return (
     <Layout>
       <SEO title="Menu Page" />
       <BrowseItemStyle>
-        {Items.map((item, i) => {
-          return <ItemList key={i} item={item} />
+        {Object.keys(Items).map((key, i) => {
+          return <ItemList key={i} item={Items[key].curItem} />
         })}
       </BrowseItemStyle>
     </Layout>
@@ -65,23 +26,3 @@ const Browse = ({ data }) => {
 }
 
 export default Browse
-
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            price
-            thumbnail
-            date
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`

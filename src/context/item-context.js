@@ -8,10 +8,7 @@ const defaultState = {
 const ItemContext = createContext(defaultState)
 
 const ItemContextProvider = ({ children }) => {
-  const [link, setLink] = useState({})
-  const addLink = link => {
-    setLink({ ...link, link })
-  }
+  const [link, addLink] = useState({})
 
   return (
     <ItemContext.Provider
@@ -20,7 +17,6 @@ const ItemContextProvider = ({ children }) => {
         addLink: addLink,
       }}
     >
-      {console.log(link, addLink)}
       {children}
     </ItemContext.Provider>
   )
