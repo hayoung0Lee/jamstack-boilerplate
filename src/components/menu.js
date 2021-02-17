@@ -87,7 +87,7 @@ const Hamburger = ({
 
 const Menu = ({ logoSize, menuSize }) => {
   const mediaQueryBreakPoint = menuSize + logoSize.width + 300
-  const [isHamburgerOpen, setHamburgerStatus] = useState(true)
+  const [isHamburgerOpen, setHamburgerStatus] = useState(false)
 
   return (
     <>

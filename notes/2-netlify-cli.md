@@ -21,3 +21,24 @@ gatsbyjs.com/plugins/gatsby-plugin-netlify-cms/
 npm install netlify-cms-app gatsby-plugin-netlify-cms
 npx netlify-cms-proxy-server
 ```
+
+## git gateway
+https://stackoverflow.com/questions/62203427/problem-with-configuring-netlify-cms-with-git-gateway
+
+
+## gatsby page에서 컨텐츠 가져오기
+https://www.gatsbyjs.com/docs/how-to/sourcing-data/sourcing-from-netlify-cms/
+
+https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/
+
+```
+npm install gatsby-source-filesystem
+```
+
+https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/
+
+
+https://www.frontendstumbles.com/gatsby-and-netlify-cms-tutorial/
+
+
+- programmatically create pages: https://www.gatsbyjs.com/docs/tutorial/part-seven/

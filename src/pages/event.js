@@ -1,14 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import { tempStyle } from "./index"
 
 const Event = () => (
   <Layout>
     <SEO title="Event Page" />
-    Event Page <br />
-    <Link to="/">Go back to the homepage</Link>
+    <div style={tempStyle}>Event Page</div>
   </Layout>
 )
 

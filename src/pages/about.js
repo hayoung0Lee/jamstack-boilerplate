@@ -1,14 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import { tempStyle } from "./index"
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About Page" />
-    About Page <br />
-    <Link to="/">Go back to the homepage</Link>
+    <div style={tempStyle}>About Page</div>
   </Layout>
 )
 

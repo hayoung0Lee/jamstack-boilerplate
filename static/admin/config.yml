@@ -24,11 +24,12 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - {
           label: "Price",
-          name: "rating",
+          name: "price",
           widget: "number",
           value_type: "int",
           min: 1000,
           step: 1000,
         }
       - { label: "Body", name: "body", widget: "markdown" }
-# local_backend: true
+
+local_backend: true # npx netlify-cms-proxy-server
