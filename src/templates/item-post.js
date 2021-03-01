@@ -35,7 +35,7 @@ export default function ItemPost({ data }) {
       </div>
       <div>
         <img
-          src={item.frontmatter.thumbnail}
+          src={item.frontmatter.image}
           alt={item.frontmatter.title}
           width="400"
         />
@@ -52,7 +52,7 @@ export const query = graphql`
         date
         layout
         price
-        thumbnail
+        image
         title
       }
       fields {

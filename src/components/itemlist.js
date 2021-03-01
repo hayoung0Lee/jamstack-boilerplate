@@ -27,7 +27,7 @@ const ItemList = ({ item }) => {
         <ItemStyle>
           <div>
             <img
-              src={item.node.frontmatter.thumbnail}
+              src={item.node.frontmatter.image}
               alt={item.node.frontmatter.title}
               width="200"
             />

@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
             frontmatter {
               title
               price
-              thumbnail
+              image
               date
             }
             html
